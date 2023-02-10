@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_primary"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- linear layout is used to align all children in a single direction -->
+    <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:background="@color/design_default_color_primary"
+            android:padding="5dp">
+            <!-- use text view to add text to homepage of application-->
+            <!-- in this case this is for the top of the home page, welcoming users-->
+            <!-- we use sp which stands for scale independent pixels for user font size selection -->
+            <TextView
+                android:id="@+id/textHome"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Welcome to T.T.U.B!"
+                android:textColor="@color/design_default_color_on_primary"
+                android:textSize="35sp" />
+            <!-- add color and bold the text-->
+            <!-- we use sp which stands for scale independent pixels for user font size selection -->
+            <!-- here we can set the width and height -->
+            <!-- here we can set the text color, text size, and text style -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:text="ragtag"
+                android:textColor="@color/design_default_color_on_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- linear layout is used to align all children in a single direction
+      in this case vertically-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
+            <!-- linear layout is used to align all children in a single direction
+      in this case horizontally-->
+            <!-- use android background to insert tiles background from other file-->
+            <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/tiles_bg"
+                android:layout_marginTop="30dp"
+                android:padding="3dp"
+                android:layout_gravity="center">
+                <!-- linear layout is used to align all children in a single direction
+      in this case vertically-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:orientation="vertical">
+                    <!-- use text view to add text to homepage of application-->
+                    <!-- in this case this is for the tiles button-->
+                    <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+                    <!-- we use sp which stands for scale independent pixels for user font size selection -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Tiles"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                    <!-- use text view to add text to homepage of application-->
+                    <!-- in this case this is for describing what the tiles button does-->
+                    <TextView
+                        android:layout_width="243dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15sp"
+                        android:text="Helps with counters,trackers,and dice rolling"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- insert image for tiles to display on the homepage-->
+                <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:padding="8dp"
+                    android:src="@drawable/img"
+                    android:layout_marginLeft="10dp"/>
+                <!-- linear layout is used to align all children in a single direction
+      in this case horizontally-->
+                <!-- use android background to insert maps background from other file-->
+                <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/maps_bg"
+                android:layout_marginTop="30dp"
+                android:padding="3dp"
+                android:layout_gravity="center">
+                <!-- linear layout is used to align all children in a single direction
+      in this case vertically-->
+                <LinearLayout
+                    android:layout_width="256dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <!-- we use sp which stands for scale independent pixels for user font size selection -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Maps"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15sp"
+                        android:text="Custom dungeon map to help with character positioning"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <!-- linear layout is used to align all children in a single direction
+      in this case vertically-->
+                    <!-- insert image for maps to display on the homepage-->
+                    <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:padding="8dp"
+                    android:src="@drawable/map1"
+                    android:layout_marginLeft="10dp"/>
+                <!-- use android background to insert scores background from other file-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/scores_bg"
+                android:layout_marginTop="30dp"
+                android:padding="3dp"
+                android:layout_gravity="center">
+                <!-- linear layout is used to align all children in a single direction
+      in this case vertically and use android background to insert scores background from other file and we use dp here-->
+                <LinearLayout
+                    android:layout_width="257dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <!-- linear layout is used to align all children in a single direction
+      in this case vertically and use android background to insert scores background from other file and we use dp here-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Scores"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                    <!-- linear layout is used to align all children in a single direction
+      in this case vertically-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15sp"
+                        android:text="Custom scoresheet to keep track of important stats"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <!-- linear layout is used to align all children in a single direction
+      in this case vertically-->
+                    <!-- insert image for score sheets to display on the homepage-->
+                    <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scoresheets"
+                    android:layout_marginLeft="10dp"/>
+                <!-- use android background to insert template background from other file-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/template_bg"
+                android:layout_marginTop="30dp"
+                android:padding="3dp"
+                android:layout_gravity="center">
+                <!-- linear layout is used to align all children in a single direction
+      in this case vertically-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:orientation="vertical">
+                    <!-- use text view to add text to homepage of application-->
+                    <!-- in this case this is for the templates button-->
+                    <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+                    <!-- we use sp which stands for scale independent pixels for user font size selection -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Templates"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                    <!-- use text view to add text to homepage of application-->
+                    <!-- in this case this is for describing what the templates button does-->
+                    <TextView
+                        android:layout_width="243dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15sp"
+                        android:text="Custom templates users can download, share, and create"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!-- insert image for templates to display on the homepage-->
+                <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:padding="8dp"
+                    android:src="@drawable/template"
+                    android:layout_marginLeft="10dp"/>
+                <!-- linear layout is used to align all children in a single direction
+      in this case horizontally-->
+                <!-- use android background to insert templates background from other file-->
+                <!-- we use dp which is a virtual pixel unit in order to communicate layout dimensions -->
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
